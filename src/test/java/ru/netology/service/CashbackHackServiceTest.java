@@ -1,10 +1,11 @@
 package ru.netology.service;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.testng.Assert.*;
 
-class CashbackHackServiceTest {
+public class CashbackHackServiceTest {
+
 
     @Test
     void negativeValue() {
@@ -14,7 +15,7 @@ class CashbackHackServiceTest {
         int expected = 1001;
         int actual = service.remain(-1);
 
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
 
     }
 
@@ -26,7 +27,7 @@ class CashbackHackServiceTest {
         int expected = 1000;
         int actual = service.remain(0);
 
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
 
     }
 
@@ -38,7 +39,7 @@ class CashbackHackServiceTest {
         int expected = 999;
         int actual = service.remain(1);
 
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
 
     }
 
@@ -50,7 +51,7 @@ class CashbackHackServiceTest {
         int expected = 501;
         int actual = service.remain(499);
 
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
 
     }
 
@@ -62,7 +63,7 @@ class CashbackHackServiceTest {
         int expected = 1;
         int actual = service.remain(999);
 
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
 
     }
 
@@ -74,7 +75,7 @@ class CashbackHackServiceTest {
         int expected = 0;
         int actual = service.remain(1000);
 
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
 
     }
 
@@ -86,7 +87,7 @@ class CashbackHackServiceTest {
         int expected = 999;
         int actual = service.remain(1001);
 
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
 
     }
 }
