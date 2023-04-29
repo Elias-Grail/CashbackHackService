@@ -67,7 +67,6 @@ public class CashbackHackServiceTest {
 
     }
 
-    @Ignore
     @Test
     public void valueOneThousand() {
 
